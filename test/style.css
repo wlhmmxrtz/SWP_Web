@@ -1,0 +1,26 @@
+/* Element Selector */
+
+div{
+    background-color: blanchedalmond;
+}
+
+/* id Selector */
+#header{
+    font-size: 4rem;
+    color: aqua;
+}
+
+#subtitle{
+    font-size: 3rem;
+    color: blueviolet;
+}
+
+
+#text p {
+    background-color: burlywood;
+}
+/* Klassen Selector */
+
+.text{
+    background-color: aquamarine;
+}
