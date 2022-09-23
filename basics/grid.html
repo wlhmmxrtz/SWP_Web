@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=5, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            background-color: rgb(52, 252, 185);
+            padding: 5px;
+        }
+        .container{
+           display: grid; 
+           grid-template-columns: 33% 33% 33%;
+           grid-auto-rows: minmax(125px, auto);
+           column-gap: 2px;
+           row-gap: 2px;
+        }
+        .item1{
+            grid-row-start: span 3;
+        }
+        .item2{
+            grid-column-start: span 2;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="box item1"> eins</div>
+        <div class="box item2"> eins</div>
+        <div class="box item3"> eins</div>
+        <div class="box item4"> eins</div>
+        <div class="box item5"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus ipsa modi omnis dolores voluptate! Similique molestias cumque placeat, amet dignissimos consectetur. Ullam, repudiandae.</div>
+    </div>
+</body>
+</html>
