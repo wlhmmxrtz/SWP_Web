@@ -4,8 +4,9 @@
 }
 
 .container{
-   align-content: center;
-   margin: 0 auto;
+  margin: 1rem auto;
+  padding: 1rem;
+  align-content: center;
 }
 
 #button{
