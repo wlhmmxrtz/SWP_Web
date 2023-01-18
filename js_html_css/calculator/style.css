@@ -1,0 +1,100 @@
+*{
+    background-color: antiquewhite;
+    font-family: monospace;
+}
+
+h1{
+    padding: 5px 5px;
+    margin-left: middle;
+}
+
+.content{
+    width: 100%;
+    justify-content: center;
+    align-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem;
+}
+
+#div1{
+    padding: 5px 5px;
+}
+
+#div2{
+    padding: 5px 5px;
+}
+
+#Number1{
+    padding: 20px 58px;
+    transition-duration: 0.5s;
+    border-radius: 10px; 
+    font-size: large;
+    font-weight: light;
+}
+#Number2{
+    padding: 20px 58px;
+    transition-duration: 0.5s;
+    border-radius: 10px;
+    font-size: large;
+    font-weight: light;
+}
+
+#buttons{
+    padding: 5px 5px;
+}
+
+#add{
+    padding: 20px 30px;
+    transition-duration: 0.5s;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+#add:hover{
+background-color:rgb(54, 54, 54);
+  color: antiquewhite;
+}
+
+#subtract{
+    padding: 20px 30px;
+    transition-duration: 0.5s;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+#subtract:hover{
+background-color:rgb(54, 54, 54);
+  color: antiquewhite;
+}
+
+#multiply{
+    padding: 20px 30px;
+    transition-duration: 0.5s;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+#multiply:hover{
+background-color:rgb(54, 54, 54);
+  color: antiquewhite;
+}
+
+#divide{
+    padding: 20px 30px;
+    transition-duration: 0.5s;
+    border-radius: 10px;
+    align-content: center;
+    font-weight: bold;
+}
+
+#divide:hover{
+background-color:rgb(54, 54, 54);
+  color: antiquewhite;
+}
+
+#result{
+    font-size: x-large;
+    font-style: unset;
+    font-weight: bold;
+}
