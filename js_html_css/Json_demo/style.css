@@ -1,26 +1,23 @@
-*{
+* {
     background-color: antiquewhite;
     font-family: monospace;
 }
 
 
-h1{
+h1 {
     text-align: center;
     font-weight: bolder;
 
 }
-.container{
+
+.container {
     display: flex;
     align-items: center;
     width: 100%;
     justify-content: center;
 }
 
-#content{
-
-}
-
-#Hans{
+#Hans {
     display: flex;
     width: 100%;
     justify-content: center;
@@ -28,7 +25,7 @@ h1{
     font-weight: 800;
 }
 
-#Paul{
+#Paul {
     display: flex;
     width: 100%;
     justify-content: center;
@@ -36,7 +33,7 @@ h1{
     font-weight: 800;
 }
 
-#Franz{
+#Franz {
     display: flex;
     width: 100%;
     justify-content: center;
