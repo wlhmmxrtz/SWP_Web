@@ -7,7 +7,8 @@ let data = [
 function loadPeople(){
     let html = "";
     data.forEach(element => {
-        html += "<div>" + element.firstName + " " + element.lastName + " Points: " + element.points + "</div>"
+        html += "<div id='" + element.firstName + "'>" +element.firstName + " " + element.lastName + " Points: " + element.points + " " + "</div>"
+        console.log(element.start)
         
     });
 
