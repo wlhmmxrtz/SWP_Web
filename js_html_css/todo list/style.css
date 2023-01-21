@@ -1,0 +1,136 @@
+*{
+    background-color: antiquewhite;
+    font-family: monospace;
+}
+
+
+h1 {
+    text-align: center;
+}
+.container{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+}
+
+#input {
+    padding: 20px 40px;
+    border-radius: 10px; 
+    font-size: large;
+    font-weight: light;
+    width: 60%;
+    margin: 5px;
+}
+
+.confirm{
+    padding: 20px 20px;
+    transition-duration: 0.5s;
+    border-radius: 10px;
+    font-weight: bolder;
+    margin: 5px;
+}
+
+.fa-check{
+    transition-duration: 0.5s;
+}
+
+.confirm:hover .fa-check{
+    background-color: rgb(54, 54, 54);
+    color:rgb(18, 187, 32);
+    
+  }
+
+.confirm:hover{
+    background-color: rgb(54, 54, 54);
+    color:antiquewhite;
+    
+  }
+
+
+
+.inputs{
+        display: flex;
+        justify-content: left;
+}
+
+
+
+#outputs {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.output{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-content: space-between;
+    font-size:xx-large;
+    font-weight: 800;
+}
+
+.output {
+    padding: 20px 40px;
+    border-radius: 10px;
+    border-style: solid;
+}
+
+.delete {
+    padding: 20px 20px;
+    transition-duration: 0.5s;
+    border-radius: 10px;
+    font-weight: bolder;
+    margin: 5px;
+}
+
+.delete {
+    padding: 20px 20px;
+    transition-duration: 0.5s;
+    border-radius: 10px;
+    font-weight: bolder;
+    margin: 10px;
+}
+
+.fa-trash-can{
+    transition-duration: 0.5s;
+}
+
+.delete:hover .fa-trash-can{
+    background-color: rgb(54, 54, 54);
+    color:rgb(240, 1, 1);
+}
+
+.delete:hover {
+    background-color: rgb(54, 54, 54);
+    color:antiquewhite;
+}
+
+.done {
+    display: flex;
+    justify-content: center;
+    padding: 20px 20px;
+    transition-duration: 0.5s;
+    border-radius: 10px;
+    font-weight: bolder;
+    margin: 10px;
+}
+
+.fa-check-double{
+    transition-duration: 0.5s;
+}
+
+.done:hover .fa-check-double{
+    background-color: rgb(54, 54, 54);
+    color:rgb(18, 187, 32);
+}
+
+
+.done:hover{
+    background-color: rgb(54, 54, 54);
+    color:antiquewhite;
+}
+
