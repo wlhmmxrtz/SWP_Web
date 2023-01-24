@@ -1,0 +1,91 @@
+*{
+    background-color: antiquewhite;
+    font-family: monospace;
+}
+
+h1 {
+    text-align: center;
+}
+
+#output{
+    text-align: center;
+    font-size: xx-large;
+    font-weight: bolder;
+}
+
+.buttons{
+    padding: 5px 5px;
+    display: flex;
+    justify-content: center;
+}
+
+#Schere {
+    padding: 20px 20px;
+    transition-duration: 0.5s;
+    border-radius: 10px;
+    font-weight: bolder;
+    margin: 10px;
+}
+
+#Schere:hover {
+    background-color: rgb(54, 54, 54);
+    color: antiquewhite;
+}
+
+.fa-hand-scissors {
+    transition-duration: 0.5s;
+}
+
+#Schere:hover .fa-hand-scissors{
+    background-color: rgb(54, 54, 54);
+    color: rgb(255, 0, 0);
+}
+
+
+
+
+#Stein {
+    padding: 20px 20px;
+    transition-duration: 0.5s;
+    border-radius: 10px;
+    font-weight: bolder;
+    margin: 10px;
+}
+
+#Stein:hover {
+    background-color: rgb(54, 54, 54);
+    color: antiquewhite;
+}
+
+.fa-hand-back-fist{
+    transition-duration: 0.5s;
+}
+
+#Stein:hover .fa-hand-back-fist{
+    background-color: rgb(54, 54, 54);
+    color: rgb(251, 255, 0);
+}
+
+
+
+#Papier {
+    padding: 20px 20px;
+    transition-duration: 0.5s;
+    border-radius: 10px;
+    font-weight: bolder;
+    margin: 10px;
+}
+
+#Papier:hover {
+    background-color: rgb(54, 54, 54);
+    color: antiquewhite;
+}
+
+.fa-hand {
+    transition-duration: 0.5s;
+}
+
+#Papier:hover .fa-hand {
+    background-color: rgb(54, 54, 54);
+    color: rgb(47, 0, 255);
+}
