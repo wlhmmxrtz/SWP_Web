@@ -1,0 +1,10 @@
+* {
+    background-color: antiquewhite;
+    font-family: monospace;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    margin: 25px;
+}
