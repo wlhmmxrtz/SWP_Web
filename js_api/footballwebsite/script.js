@@ -1,5 +1,12 @@
+
+function getGameday() {
+    let gameday = document.getElementById("input").value;
+
+
+const apiurl = "https://api.openligadb.de/getmatchdata/legaseriea/2018/" + gameday;
+
 function loadTable() {
-    fetch("https://app.sportdataapi.com/api/v1/soccer/matches?apikey=96ff5510-a15e-11ed-99e1-b744a843a752&season_id=2100&status_code=3").then((result) => {
+    fetch(apiurl).then((result) => {
         result.json().then((data) => {
             outputTable(data)
         })
@@ -9,10 +16,13 @@ function loadTable() {
 function outputTable(data) {
     let html = "";
     
-    data.forEach(element => {
-        html += "<div>" + element.data.match_id + "</div>"
-        });
+    data.forEach((match) => {
+        if (match.matchIsFinished) {
+          html += `<div class="matches"><img class="teamIMG" src="${match.team1.teamIconUrl}" alt="Team Icon"> <p class="result">${match.matchResults[0].pointsTeam1} : ${match.matchResults[0].pointsTeam2}</p><img class="teamIMG" src="${match.team2.teamIconUrl}" alt="Team Icon"></div>`;
+        }
+      });
     document.getElementById("standings").innerHTML=html;
 }
 
 loadTable()
+}

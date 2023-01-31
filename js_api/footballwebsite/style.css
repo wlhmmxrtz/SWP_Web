@@ -1,6 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Teko&display=swap');
+
 * {
-  font-family: "Poppins", sans-serif;
-  src: url("https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap");
+  font-family: 'Teko', sans-serif;
 }
 
 body {
@@ -37,4 +38,46 @@ body {
     top: -105%;
     bottom: 0;
     margin: auto;
+}
+
+.teamIMG {
+  height: 64px;
+  width: 64px;
+  margin: 10px;
+}
+
+#standings {
+  margin-top: 3cm;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 15px;
+  grid-row-gap: 10px;
+  overflow: hidden;
+}
+
+.matches {
+  display: flex;
+  margin: 15px;
+  overflow: hidden;
+}
+
+.result {
+  font-weight: bold;
+  font-size:0.8cm;
+}
+
+#input {
+    position: absolute;
+    left: 45%;
+    bottom: -12%;
+    width: 10vw;
+    height: 5vh;
+      background: rgba(255, 255, 255, 0.45);
+      border-radius: 16px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(7.5px);
+      -webkit-backdrop-filter: blur(7.5px);
+      border: 1px solid rgba(255, 255, 255, 0.19);
+      font-size: x-large;
 }
