@@ -1,12 +1,44 @@
 .App {
   text-align: center;
+  position: relative;
 }
 
 .App-logo {
-  height: 5cm;
-  width: 5cm;
-  margin: auto;
-  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+  pointer-events: none;
+  animation: App-logo-spin infinite 5s linear;
+}
+
+.Login {
+  margin: 0.5cm;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 5cm;
+  width: 100%;
+  text-align: center;
+}
+
+.SpotifyPlayer {
+  margin-top: 1cm;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 5s linear;
+  }
+}
+
+.App-header {
+  background-color: antiquewhite;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: rgb(54, 54, 54);
 }
 
 @keyframes App-logo-spin {
@@ -16,9 +48,4 @@
   to {
     transform: rotate(360deg);
   }
-}
-
-.Login-container {
-  max-width: 5cm;
-  margin: 0.5cm auto;
 }
