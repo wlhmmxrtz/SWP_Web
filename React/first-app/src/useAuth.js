@@ -1,28 +1,20 @@
-import { useEffect, useState } from "react";
-import axios from "axios";
+const CLIENT_ID = "your-client-id";
+const REDIRECT_URI = "http://localhost:3000/";
 
-export function useAuth(code) {
-  const [accessToken, setAccessToken] = useState();
-
-  useEffect(() => {
-    axios
-      .post("http://localhost:8000/login", { code })
-      .then((response) => {
-
-        // If success then cut the code string from the URL and execute the other thing
-        window.history.pushState({}, null, "/");
-
-        console.log(response.data);
-        console.log("worked")
-        setAccessToken(response.data.accessToken);
-
-      })
-      .catch(() => {
-        //   If fail redirect to home page - Login page
-        console.log("didn't work")
-        window.location = "/";
-      });
-  }, [code]);
-
-  return accessToken
+async function useAuth(code) {
+  const response = await fetch(
+    `https://accounts.spotify.com/api/token?grant_type=authorization_code&code=${code}&redirect_uri=${REDIRECT_URI}&client_id=${CLIENT_ID}`,
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded",
+        Authorization: `Basic ${btoa(`${CLIENT_ID}:${process.env.REACT_APP_CLIENT_SECRET}`)}`,
+      },
+    }
+  );
+  const data = await response.json();
+  const token = data.access_token;
+  return token;
 }
+
+export default useAuth;
