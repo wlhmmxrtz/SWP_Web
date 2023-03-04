@@ -1,28 +1,32 @@
 import logo from "./logo.png";
 import "./App.css";
+import React, { useState, useEffect } from "react";
 import SpotifyPlayer from "react-spotify-web-playback";
-import React from "react";
-import "./App.css";
-import Login from "./Login";
-import Dashboard from "./Dashboard";
-import useAuth from "./useAuth";
+import { SpotifyAuth, Scopes } from 'react-spotify-auth';
+import { SpotifyApiContext } from 'react-spotify-api';
+import Cookies from 'js-cookie'
+import 'react-spotify-auth/dist/index.css'
 
 function App() {
-  const code = new URLSearchParams(window.location.search).get("code");
-  const accessToken = useAuth(code);
-
+  const [token, setToken] = React.useState(Cookies.get("spotifyAuthToken"))
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
+
         <div className="Login-container">
-          <Login />
+        <SpotifyAuth
+        redirectUri='http://localhost:3000/'
+        clientID='ea1a13b61c08485cbc4d390479c7f499'
+        scopes={[Scopes.userReadPrivate, Scopes.userReadEmail]}
+        onAccessToken={(token) => setToken(token)}
+        />
         </div>
-        {accessToken && (
+
           <div className="SpotifyPlayer">
             <SpotifyPlayer
               className="App-spotify-player"
-              token={accessToken}
+              token={token}
               uris={["spotify:artist:5K4W6rqBFWDnAN6FQUkS6x"]}
               styles={{
                 activeColor: "#fff",
@@ -35,10 +39,10 @@ function App() {
               }}
             />
           </div>
-        )}
       </header>
     </div>
   );
 }
 
 export default App;
+

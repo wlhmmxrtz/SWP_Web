@@ -11,6 +11,7 @@
     font-size: medium;
     color : antiquewhite;
     margin: 0.5cm;
+    transition-duration: 0.4s;
 }
 
 #a{

@@ -20,6 +20,10 @@
   text-align: center;
 }
 
+.Login-container {
+  margin: 0.5cm;
+}
+
 .SpotifyPlayer {
   margin-top: 1cm;
 }
