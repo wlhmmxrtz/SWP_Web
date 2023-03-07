@@ -8,9 +8,20 @@ import Cookies from 'js-cookie'
 import 'react-spotify-auth/dist/index.css'
 
 function App() {
-  const [token, setToken] = React.useState(Cookies.get("spotifyAuthToken"))
+  const [spotifyAuthToken, setSpotifyAuthToken] = React.useState(Cookies.get("spotifyAuthToken"))
+
+  useEffect(() => {
+    setSpotifyAuthToken(Cookies.get('spotifyAuthToken'))
+  }, [spotifyAuthToken])
+
   return (
     <div className="App">
+
+{Cookies.get('spotifyAuthToken') ? (
+        <SpotifyApiContext.Provider value={spotifyAuthToken}>
+          {/* Your Spotify Code here */}
+        </SpotifyApiContext.Provider>
+      ) : (
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
 
@@ -19,14 +30,13 @@ function App() {
         redirectUri='http://localhost:3000/'
         clientID='ea1a13b61c08485cbc4d390479c7f499'
         scopes={[Scopes.userReadPrivate, Scopes.userReadEmail]}
-        onAccessToken={(token) => setToken(token)}
         />
         </div>
 
           <div className="SpotifyPlayer">
             <SpotifyPlayer
               className="App-spotify-player"
-              token={token}
+              token={spotifyAuthToken}
               uris={["spotify:artist:5K4W6rqBFWDnAN6FQUkS6x"]}
               styles={{
                 activeColor: "#fff",
@@ -40,6 +50,7 @@ function App() {
             />
           </div>
       </header>
+      )}
     </div>
   );
 }
