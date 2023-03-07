@@ -1,56 +1,39 @@
 import logo from "./logo.png";
 import "./App.css";
-import React, { useState, useEffect } from "react";
+import React from "react";
 import SpotifyPlayer from "react-spotify-web-playback";
-import { SpotifyAuth, Scopes } from 'react-spotify-auth';
-import { SpotifyApiContext } from 'react-spotify-api';
-import Cookies from 'js-cookie'
 import 'react-spotify-auth/dist/index.css'
 
 function App() {
-  const [spotifyAuthToken, setSpotifyAuthToken] = React.useState(Cookies.get("spotifyAuthToken"))
-
-  useEffect(() => {
-    setSpotifyAuthToken(Cookies.get('spotifyAuthToken'))
-  }, [spotifyAuthToken])
-
   return (
     <div className="App">
-
-{Cookies.get('spotifyAuthToken') ? (
-        <SpotifyApiContext.Provider value={spotifyAuthToken}>
-          {/* Your Spotify Code here */}
-        </SpotifyApiContext.Provider>
-      ) : (
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-
-        <div className="Login-container">
-        <SpotifyAuth
-        redirectUri='http://localhost:3000/'
-        clientID='ea1a13b61c08485cbc4d390479c7f499'
-        scopes={[Scopes.userReadPrivate, Scopes.userReadEmail]}
-        />
+      <script src="https://kit.fontawesome.com/20f56f52ff.js" crossorigin="anonymous"></script>
+        <h1 class="h1">Get your code <a data-component-name="Anchor" rel="noopener noreferrer" target="_blank" href="https://accounts.spotify.com/en/authorize?response_type=token&amp;client_id=adaaf209fb064dfab873a71817029e0d&amp;redirect_uri=https:%2F%2Fdeveloper.spotify.com%2Fdocumentation%2Fweb-playback-sdk%2Fquick-start%2F&amp;scope=streaming%20user-read-email%20user-read-private%20user-library-read%20user-library-modify%20user-read-playback-state%20user-modify-playback-state&amp;show_dialog=true" class="here"><span>here</span></a></h1>
+        <div>
+        <input type="text"/>
+        <button><i class="fa-solid fa-check fa-2x"></i></button>
         </div>
-
+        <img src={logo} className="App-logo" alt="logo" />
           <div className="SpotifyPlayer">
             <SpotifyPlayer
               className="App-spotify-player"
-              token={spotifyAuthToken}
-              uris={["spotify:artist:5K4W6rqBFWDnAN6FQUkS6x"]}
+              token="BQAU0xq5y5rrtNTtznaUw3nrhT-kVMMF2Mi3GUMtUItUfb9-uzP2M7MFlEjJATjGtRsXFDASAjSeGEXqKSX-VlDxUoAPsodbo3YL1ou2auGIK8IzoDx3Qu1sJh6OIFnoQsKv7KjRQOYowrdDHgARIGl_ZdkWl8_zCMxZltumJf63N-lpP4RqLGWG8qcPqhrVL3dIcK8ucmIQQOi4s75VShQqakDQRU3KgTI
+              "
+              uris={["spotify:album:20r762YmB5HeofjMCiPMLv"]}
               styles={{
                 activeColor: "#fff",
                 bgColor: "#faebd7",
                 color: "#000000",
                 loaderColor: "#FDB9F8",
                 sliderColor: "#FDB9F8",
+                sliderTrackColor: "#FDB9F8",
                 trackArtistColor: "#FDB9F8",
                 trackNameColor: "#000000",
               }}
             />
           </div>
       </header>
-      )}
     </div>
   );
 }

@@ -3,29 +3,26 @@
   position: relative;
 }
 
+.here {
+  color: #FDB9F8;
+  font-weight: bold;
+  font-size: 36px;
+}
+
+.h1 {
+  font-size: 36px
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+  margin-top: 1cm;
   animation: App-logo-spin infinite 5s linear;
-}
-
-.Login {
-  margin: 0.5cm;
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  max-width: 5cm;
-  width: 100%;
-  text-align: center;
-}
-
-.Login-container {
-  margin: 0.5cm;
 }
 
 .SpotifyPlayer {
   margin-top: 1cm;
+  width: 100%;
 }
 
 @media (prefers-reduced-motion: no-preference) {
