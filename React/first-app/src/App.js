@@ -24,6 +24,7 @@ function App() {
     case 0:
       albumName="Ye"
       randomURI="spotify:album:2Ek1q2haOnxVqhvVKqMvJe"
+      break;
     case 1:
       albumName="The College Dropout"
       randomURI="spotify:album:4Uv86qWpGTxf7fU7lG5X6F"
