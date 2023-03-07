@@ -13,46 +13,60 @@ function App() {
 
   console.log("Inputvalue is " + inputValue);
 
-  let randomURI="";
+  let randomURI= "";
+  let albumName = "";
 
   let randomNumber = Math.floor(Math.random() * 10)
 
   let roundedNumber = Math.round(randomNumber);
 
   switch (roundedNumber) {
+    case 0:
+      albumName="Ye"
+      randomURI="spotify:album:2Ek1q2haOnxVqhvVKqMvJe"
     case 1:
+      albumName="The College Dropout"
       randomURI="spotify:album:4Uv86qWpGTxf7fU7lG5X6F"
       break;
     case 2:
+      albumName="Late Registration"
       randomURI="spotify:album:5ll74bqtkcXlKE7wwkMq4g"
       break;
     case 3:
+      albumName="Graduation"
       randomURI="spotify:album:4SZko61aMnmgvNhfhgTuD3"
       break;
     case 4:
+      albumName="808s & Heartbreak"
       randomURI="spotify:album:3WFTGIO6E3Xh4paEOBY9OU"
       break;
     case 5:
+      albumName="MBDTF"
       randomURI="spotify:album:20r762YmB5HeofjMCiPMLv"
       break;
     case 6:
+      albumName="Watch the Throne"
       randomURI="spotify:album:0OcMap99vLEeGkBCfCwRwS"
       break;
     case 7:
+      albumName="Yeezus"
       randomURI="spotify:album:7D2NdGvBHIavgLhmcwhluK"
       break;
     case 8:
+      albumName="TLOP"
       randomURI="spotify:album:7gsWAHLeT0w7es6FofOXk1"
       break;
     case 9:
+      albumName="Kids See Ghosts"
       randomURI="spotify:album:6pwuKxMUkNg673KETsXPUV"
       break;
     case 10:
+      albumName="DONDA"
       randomURI="spotify:album:5CnpZV3q5BcESefcB3WJmz"
       break;
   }
 
-  console.log(randomNumber);
+  console.log("the number " + randomNumber + " ~ " + roundedNumber + " Album: " + albumName);
 
   return (
     <div className="App">
@@ -74,7 +88,7 @@ function App() {
                 bgColor: "#faebd7",
                 color: "#000000",
                 loaderColor: "#FDB9F8",
-                sliderColor: "#FDB9F8",
+                sliderColor: "#363636",
                 sliderTrackColor: "#FDB9F8",
                 trackArtistColor: "#FDB9F8",
                 trackNameColor: "#000000",
