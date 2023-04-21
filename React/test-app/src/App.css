@@ -40,6 +40,10 @@
   font-size: 12px
 }
 
+.h3 {
+  color: #fdb9f8;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
