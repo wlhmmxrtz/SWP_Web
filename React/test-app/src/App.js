@@ -80,7 +80,7 @@ function App() {
         <div>
         <input type="text" id="codeInput" value={inputValue} placeholder="Spotify Token here" onInput={handleInputChange}/>
         </div>
-        <h1 class="h1">No Token? - Get yours <a data-component-name="Anchor" rel="noopener noreferrer" target="_blank" href="https://accounts.spotify.com/en/authorize?response_type=token&amp;client_id=adaaf209fb064dfab873a71817029e0d&amp;redirect_uri=https:%2F%2Fdeveloper.spotify.com%2Fdocumentation%2Fweb-playback-sdk%2Fquick-start%2F&amp;scope=streaming%20user-read-email%20user-read-private%20user-library-read%20user-library-modify%20user-read-playback-state%20user-modify-playback-state&amp;show_dialog=true" class="here"><span>here</span></a></h1>
+        <h1 class="h1">No Token? - Get yours <a data-component-name="Anchor" rel="noopener noreferrer" target="_blank" href="https://accounts.spotify.com/en/authorize?response_type=token&client_id=2030beede5174f9f9b23ffc23ba0705c&redirect_uri=https:%2F%2Freact-spotify-web-playback.gilbarbara.dev%2Ftoken.html&scope=streaming%20user-read-email%20user-read-private%20user-library-read%20user-library-modify%20user-read-playback-state%20user-modify-playback-state&show_dialog=false" class="here"><span>here</span></a></h1>
         <img src={error_logo} className="App-logo" alt="logo"/>
         <div className="Error">
         <div className="displayErrorMessage" wid>
